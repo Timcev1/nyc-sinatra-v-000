@@ -1,7 +1,4 @@
 class FiguresController < Sinatra::Base
-
-  set :views, Proc.new { File.join(root, "../views/") }
-
   get '/figures' do
     @figures = Figure.all
     erb :'/figures/index'
